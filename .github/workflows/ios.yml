@@ -3,12 +3,12 @@ name: iOS starter workflow
 on:
   push:
     branches: 
-     develop
-     feature
+     - develop
+     - feature
   pull_request:
     branches: 
-     main
-     develop
+     - main
+     - develop
 
 jobs:
   build:
