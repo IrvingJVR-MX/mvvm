@@ -5,6 +5,10 @@ on:
     branches: 
      - 'main'
      - 'develop'
+     
+concurrency:
+  group: build-ios-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -21,11 +25,6 @@ jobs:
           echo $default | cat >default
           echo Using default scheme: $default
    
-      - name: Bundle dependencies
-        run: bundle install
-        
-      - name: CocoaPods dependencies
-        run:  bundle exec pod install
    
       - name: Build
         env:
@@ -52,3 +51,7 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
+    
+      - name: Run coverage
+        if: success()
+        run: capture-coverage.sh
