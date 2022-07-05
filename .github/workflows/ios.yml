@@ -6,7 +6,9 @@ on:
      develop
      feature/*
   pull_request:
-    branches: [ "main" ]
+    branches: 
+     main
+     develop
 
 jobs:
   build:
