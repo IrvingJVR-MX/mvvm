@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8470349D2874E8E700D58193 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 8470349C2874E8E700D58193 /* Apollo */; };
 		84B0C3E728613C0F000E5318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0C3E628613C0F000E5318 /* AppDelegate.swift */; };
 		84B0C3E928613C0F000E5318 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0C3E828613C0F000E5318 /* SceneDelegate.swift */; };
 		84B0C3EB28613C0F000E5318 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0C3EA28613C0F000E5318 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8470349D2874E8E700D58193 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +167,9 @@
 			dependencies = (
 			);
 			name = mvvm;
+			packageProductDependencies = (
+				8470349C2874E8E700D58193 /* Apollo */,
+			);
 			productName = mvvm;
 			productReference = 84B0C3E328613C0F000E5318 /* mvvm.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 84B0C3DA28613C0F000E5318;
+			packageReferences = (
+				8470349B2874E8E700D58193 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 84B0C3E428613C0F000E5318 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -547,6 +555,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8470349B2874E8E700D58193 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8470349C2874E8E700D58193 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8470349B2874E8E700D58193 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84B0C3DB28613C0F000E5318 /* Project object */;
 }
