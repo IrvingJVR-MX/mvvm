@@ -3,7 +3,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var ea : Int = 0
-    var ea5 : Int = 0
+    var ea4 : Int = 0
     let parser = Parser()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
