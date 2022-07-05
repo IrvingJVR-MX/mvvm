@@ -17,12 +17,7 @@ class mvvmTests: XCTestCase {
         XCTAssertNotNil(instance)
     }
     
-    func testUrFormMbdel_canCreateInstance(){
-        let parser = Parser()
-        parser.loadUser()
-        XCTAssertNotNil(parser.dataArray)
-    }
-  
+
    
     
 }
