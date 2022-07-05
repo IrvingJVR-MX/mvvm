@@ -32,8 +32,7 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
     
-      - name: Bundle dependencies
-        run:  bundle install
+
         
       - name: CocoaPods dependencies
         run:  bundle exec pod install
