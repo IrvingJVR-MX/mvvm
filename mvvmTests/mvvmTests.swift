@@ -15,6 +15,7 @@ class mvvmTests: XCTestCase {
     func testUSerFormModel_canCreateInstance(){
         let instance = UserDetails (userId: 0, id: 1, title: "Making unit test", body: "unit test")
         XCTAssertNotNil(instance)
+       
     }
     
 
