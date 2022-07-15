@@ -22,4 +22,5 @@ workflows:
   sample: 
     jobs:
       - build:
+         name: sonarCloud
          context: sonarcloud
