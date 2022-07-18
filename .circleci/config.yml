@@ -19,13 +19,13 @@ jobs:
   build:
     docker:
       #- image: "linux"
-      - image: cimg/node:lts
+      - image: cimg/base:2021.04
     steps:
       - checkout
       - sonarcloud/scan
 
 orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.3
+  sonarcloud: sonarsource/sonarcloud@1.0.2
 
 workflows:
   main:
