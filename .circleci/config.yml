@@ -21,6 +21,8 @@ jobs:
   sonar-cloud-orb:
     docker:
       - image: cimg/base:2021.04
+    environment:
+       SONAR_SCANNER_OPTS: -Xss16m -Xmx1g
     steps:
       - checkout
       - sonarcloud/scan
