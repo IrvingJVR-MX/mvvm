@@ -19,7 +19,7 @@ jobs:
   build:
     docker:
       #- image: "linux"
-      - image: node:latest
+      - image: linux:latest
     steps:
       - checkout
       - sonarcloud/scan
