@@ -19,7 +19,7 @@ jobs:
   build:
     docker:
       #- image: "linux"
-      - image: cimg/base:2020.01
+      - image: node:latest
     steps:
       - checkout
       - sonarcloud/scan
