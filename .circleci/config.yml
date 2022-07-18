@@ -15,21 +15,23 @@ version: 2.1
      # - store_artifacts:
       #    path: test_output
        #   destination: scan-output
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.2
 jobs:
-  build:
+  sonar-cloud-orb:
     docker:
-      #- image: "linux"
       - image: cimg/base:2021.04
     steps:
       - checkout
       - sonarcloud/scan
 
-orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.2
-
 workflows:
-  main:
+  version: 2
+  build-and-deploy:
     jobs:
-      - build:
+      - sonar-cloud-orb:
           context: SonarCloud
+          filters:
+            branches:
+              only: develop
 
