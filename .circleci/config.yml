@@ -19,7 +19,7 @@ jobs:
   build:
     docker:
       #- image: "linux"
-      - image: linux:latest
+      - image: cimg/node:lts
     steps:
       - checkout
       - sonarcloud/scan
