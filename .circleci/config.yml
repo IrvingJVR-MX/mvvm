@@ -18,11 +18,11 @@ version: 2.1
 orbs:
   sonarcloud: sonarsource/sonarcloud@1.0.2
 jobs:
-  sonar-cloud-orb:
+  sonar-cloud-or:
     docker:
       - image: cimg/base:2021.04
     environment:
-       SONAR_SCANNER_OPTS: -Xss16m -Xmx1g
+       SONAR_SCANNER_OPTS: -Xmx512m
     steps:
       - checkout
       - sonarcloud/scan
