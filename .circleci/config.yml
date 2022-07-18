@@ -18,7 +18,8 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:2020.01
+      - image: "linux"
+      #- image: cimg/base:2020.01
     steps:
       - checkout
       - sonarcloud/scan
